@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping("Hello")
 public class HelloController {
 
 
@@ -13,5 +14,9 @@ public class HelloController {
     public String index() {
         return "Hello World!";
     }
+
+    @RequestMapping(value = "goodbye")
+    @ResponseBody
+    public String goodbye() { return "Goodbye!"; }
 
 }
